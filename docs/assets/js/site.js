@@ -4,7 +4,7 @@
    ========================================================== */
 const CONFIG = {
   // URL printed by `npx wrangler deploy` (step 7 of the guide)
-  WORKER_URL: "spudsizer-leads.geertvanmaldegem.workers.dev",
+  WORKER_URL: "https://spudsizer-leads.geertvanmaldegem.workers.dev",
   // Turnstile "Site key" (Cloudflare dashboard → Turnstile).
   // The value below is Cloudflare's public test key: it always passes, so the page works before setup.
   TURNSTILE_SITE_KEY: "0x4AAAAAAFPlYaKSjhrtp24N",
