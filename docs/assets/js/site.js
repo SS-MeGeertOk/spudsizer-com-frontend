@@ -7,7 +7,7 @@ const CONFIG = {
   WORKER_URL: "https://spudsizer-leads.YOUR-SUBDOMAIN.workers.dev",
   // Turnstile "Site key" (Cloudflare dashboard → Turnstile).
   // The value below is Cloudflare's public test key: it always passes, so the page works before setup.
-  TURNSTILE_SITE_KEY: "1x00000000000000000000AA",
+  TURNSTILE_SITE_KEY: "0x4AAAAAAFPlYaKSjhrtp24N",
 };
 
 let turnstileWidgetId = null;
