@@ -1,0 +1,17 @@
+name = "spudsizer-leads"
+main = "src/index.js"
+compatibility_date = "2026-09-01"
+
+[vars]
+# Websites allowed to post to this form.
+# While testing on GitHub before DNS is done, add your github.io address, e.g. ",https://yourname.github.io"
+ALLOWED_ORIGINS = "https://spudsizer.com,https://www.spudsizer.com"
+# Recipients, comma-separated. Switch to the second line once info@spudsizer.com exists:
+TO_EMAILS = "info@spudsizer.nl"
+# TO_EMAILS = "info@spudsizer.nl,info@spudsizer.com"
+# Sender – must be on the domain you verified in Resend
+FROM_EMAIL = "Spudsizer website <website@spudsizer.com>"
+
+# Secrets (NOT in this file) – set them with:
+#   npx wrangler secret put TURNSTILE_SECRET
+#   npx wrangler secret put RESEND_API_KEY
