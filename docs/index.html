@@ -4,9 +4,23 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Spudsizer – Size your test dig in the field</title>
-<meta name="description" content="Place the blue ball in the test dig, take one photo with your phone, and get size grading, tuber count and yield within minutes. €150 per season.">
+<meta name="description" content="Place the blue ball in the test dig, take one photo with your phone, and get size grading, tuber count and yield within minutes. €150 per season, excl. VAT.">
 <link rel="canonical" href="https://www.spudsizer.com/">
+<link rel="alternate" hreflang="en" href="https://www.spudsizer.com/">
+<link rel="alternate" hreflang="nl" href="https://www.spudsizer.com/nl/">
+<link rel="alternate" hreflang="x-default" href="https://www.spudsizer.com/">
 <meta name="theme-color" content="#0B1C2D">
+<script>
+  // Visitors whose browser is set to Dutch go to the Dutch page,
+  // unless they chose English before (stored when they click EN).
+  (function () {
+    try {
+      if (localStorage.getItem("ss-lang") === "en") return;
+      var l = (navigator.languages && navigator.languages[0]) || navigator.language || "";
+      if (/^nl\b/i.test(l)) location.replace("nl/" + location.hash);
+    } catch (e) {}
+  })();
+</script>
 
 <!-- Link previews (WhatsApp, LinkedIn, etc.) -->
 <meta property="og:type" content="website">
@@ -24,8 +38,7 @@
 <link rel="preload" as="image" href="assets/img/hero-balls-in-field.webp" imagesrcset="assets/img/hero-balls-in-field-800.webp 800w, assets/img/hero-balls-in-field.webp 1616w" imagesizes="100vw">
 <link rel="stylesheet" href="assets/css/site.css">
 
-<!-- Cloudflare Turnstile (bot check on the sign-up form) -->
-<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onTurnstileLoad" async defer></script>
+<script src="assets/js/config.js" defer></script>
 <script src="assets/js/site.js" defer></script>
 </head>
 <body>
@@ -57,7 +70,7 @@
         <div class="lang">
           <span aria-current="true">EN</span>
           <span class="sep" aria-hidden="true">/</span>
-          <a href="https://spudsizer.nl" hreflang="nl" lang="nl">NL</a>
+          <a href="nl/" hreflang="nl" lang="nl" data-lang="nl">NL</a>
         </div>
         <a href="#pricing" class="btn btn-primary header-cta">Order for 2027</a>
       </div>
@@ -85,7 +98,7 @@
     <div class="price-tag">
       <div>
         <div class="price-tag-label">Season 2027</div>
-        <div class="price-tag-amount"><strong>€150</strong><span>per season</span></div>
+        <div class="price-tag-amount"><strong>€150</strong><span>per season, excl. VAT</span></div>
       </div>
       <a href="#signup">Sign up now <svg class="icon" style="width:18px;height:18px"><use href="#i-arrow-right"/></svg></a>
     </div>
@@ -194,7 +207,7 @@
           <span class="badge">Orders open</span>
         </div>
         <div class="price-card-amount"><strong>€150</strong><span>per season</span></div>
-        <div class="vat">Excl. VAT</div>
+        <div class="vat">Excl. VAT · For business customers</div>
         <ul class="perks">
           <li><span class="tick"><svg class="icon"><use href="#i-check"/></svg></span>Spudsizer reference ball</li>
           <li><span class="tick"><svg class="icon"><use href="#i-check"/></svg></span>Unlimited test digs</li>
@@ -228,6 +241,8 @@
           </div>
           <div class="field"><label for="f-message">Message (optional)</label><textarea id="f-message" name="message" rows="4" placeholder="Number of seasons, questions, best time to call"></textarea></div>
 
+          <input type="hidden" name="language" value="en">
+
           <!-- Honeypot: hidden from people, bots fill it in -->
           <div class="hp-field" aria-hidden="true"><label for="f-website">Website</label><input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
 
@@ -236,7 +251,7 @@
 
           <button type="submit" class="btn btn-primary submit-btn">Send <svg class="icon"><use href="#i-arrow-right"/></svg></button>
           <p class="form-error" role="alert"></p>
-          <p class="privacy-note">We only use your details to contact you about Spudsizer.</p>
+          <p class="privacy-note">We only use your details to contact you about Spudsizer. Read our <a href="privacy/">privacy statement</a>.</p>
         </form>
 
         <div id="lead-thanks" class="thanks" hidden tabindex="-1">
@@ -262,12 +277,27 @@
         <a href="#about">About us</a>
         <a href="#pricing">Pricing</a>
         <a href="#signup">Contact</a>
-        <a href="https://spudsizer.nl" hreflang="nl" lang="nl">Nederlands</a>
+        <a href="nl/" hreflang="nl" lang="nl" data-lang="nl">Nederlands</a>
       </nav>
+    </div>
+    <div class="footer-legal">
+      <div>
+        <h2>Company details</h2>
+        <p>Spudsizer B.V.<br>Veendijk 28<br>9636HH Zuidbroek, the Netherlands<br>KvK: 42169416<br>VAT: NL870019351B01<br></p>
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <p><a href="mailto:info@spudsizer.nl">info@spudsizer.nl</a><br><a href="tel:+31683628932">+31 6 83628932</a></p>
+      </div>
+      <div class="footer-disclaimer">
+        <h2>Disclaimer</h2>
+        <p>Spudsizer is a decision support system. Its results are estimates based on a photo and are indicative only; they cannot be taken as fact. Always combine them with your own observations and experience before you decide. No rights can be derived from the results, and Spudsizer is not liable for decisions based on them.</p>
+        <p>Spudsizer sells to business customers only. All prices exclude VAT.</p>
+      </div>
     </div>
     <div class="footer-bottom">
       <span>© 2026 Spudsizer · Digital sizing for seed potatoes</span>
-      <a href="mailto:info@spudsizer.nl">info@spudsizer.nl</a>
+      <a href="privacy/">Privacy statement</a>
     </div>
   </div>
 </footer>
